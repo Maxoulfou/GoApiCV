@@ -1,0 +1,201 @@
+basePath: /
+definitions:
+  errors.Error:
+    properties:
+      error:
+        type: string
+      timestamp:
+        type: string
+    type: object
+  models.About:
+    properties:
+      about:
+        type: string
+      certifications:
+        additionalProperties:
+          items:
+            type: string
+          type: array
+        type: object
+      education:
+        additionalProperties:
+          additionalProperties:
+            type: string
+          type: object
+        type: object
+      experience:
+        additionalProperties:
+          additionalProperties:
+            type: string
+          type: object
+        type: object
+      timestamp:
+        type: string
+    type: object
+  models.Email:
+    properties:
+      body:
+        type: string
+      email:
+        type: string
+      subject:
+        type: string
+    required:
+    - body
+    - email
+    - subject
+    type: object
+  models.GitHub:
+    properties:
+      data:
+        properties:
+          user:
+            properties:
+              pinnedItems:
+                properties:
+                  nodes:
+                    items:
+                      $ref: '#/definitions/models.node'
+                    type: array
+                type: object
+            type: object
+        type: object
+    type: object
+  models.User:
+    properties:
+      age:
+        type: integer
+      country:
+        type: string
+      email:
+        type: string
+      languages:
+        items:
+          type: string
+        type: array
+      name:
+        type: string
+      organization:
+        type: string
+      profession:
+        type: string
+      socials:
+        additionalProperties:
+          type: string
+        type: object
+      tech_stack:
+        additionalProperties:
+          additionalProperties:
+            items:
+              type: string
+            type: array
+          type: object
+        type: object
+      timestamp:
+        type: string
+    type: object
+  models.languages:
+    properties:
+      nodes:
+        items:
+          properties:
+            name:
+              type: string
+          type: object
+        type: array
+    type: object
+  models.node:
+    properties:
+      description:
+        type: string
+      forkCount:
+        type: integer
+      languages:
+        $ref: '#/definitions/models.languages'
+      name:
+        type: string
+      stargazerCount:
+        type: integer
+      url:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: Devansh's portfolio as a REST API.
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  title: Portfolio API
+  version: "1.0"
+paths:
+  /:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.User'
+        "502":
+          description: Bad Gateway
+          schema:
+            $ref: '#/definitions/errors.Error'
+      summary: Get user information
+  /about:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.About'
+        "502":
+          description: Bad Gateway
+          schema:
+            $ref: '#/definitions/errors.Error'
+      summary: Get about section of user
+  /contact:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Data for emailing
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/models.Email'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/errors.Error'
+        "502":
+          description: Bad Gateway
+          schema:
+            $ref: '#/definitions/errors.Error'
+      summary: Send an email to the user
+  /projects:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.GitHub'
+        "502":
+          description: Bad Gateway
+          schema:
+            $ref: '#/definitions/errors.Error'
+      summary: Get projects of user
+swagger: "2.0"

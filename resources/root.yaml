@@ -1,0 +1,40 @@
+name: "Maxence Brochier"
+year: 2001
+month: 05
+date: 4
+profession: "Junior SysAdmin"
+organization: "NextVision | brochier.xyz"
+country: "France / Switzerland"
+email: "maxence@brochier.xyz"
+languages: ["C", "Golang", "PHP", "Python", "Java", "HTML", "CSS", "Javascript", "SQL", "Bash"]
+tech_stack:
+  frameworks:
+    go: ["GIN", "StormDB", "Kataras/Iris", "Viper", "Cobra", "Gorilla MUX", "ArduinoGo"]
+    php: ["laravel", "(In progress...) Symfony"]
+    css: ["Bootstrap", "TailwindCSS"]
+    js: ["(In progress...) Angular", "NodeJS", "DiscordJS"]
+  databases:
+    sql: ["mysql", "postgresql", "SQLite3"]
+  files:
+    formats: ["LVM", "RAID", "SHR", "BRTFS"]
+  tools:
+    vcs: ["git", "github"]
+    devops: ["circleci", "travisci", "docker", "Vagrant", "Terraform", "Ansible"]
+    virtualization: ["LXC", "OpenVZ", "KVM"]
+  os:
+    windows: ["Windows XP, 7, 8, 10, 11"]
+    linux: ["Debian 10, 11", "Ubuntu 19, 20", "Ubuntu Server", "Kali Linux", "Tails"]
+    darwin: ["Mac OS Catalina / Mojave"]
+    datacenter: ["Proxmox", "ESXi", "VSphere", "Synology"]
+    networking: ["Luxul", "Araknis", "Cisco", "Synology", "Mikrotik", "Dell"]
+setup:
+  computer: ["Aorus B550 PRO AC", "Ryzen 7 5800X", "HyperX 3200 32Go", "Aorus 3070 Master OC", "MX500 1To", "NVME Samsung EVO 500Go"]
+  dual-boot: ["Windows 11 Pro", "Kali Linux"]
+  lab: ["DS218J+", "DS918+", "2 x PowerEdge R410"]
+  lab-os: ["Synolody DSM 7", "Proxmox"]
+  lab-virtualization: ["LXC"]
+
+socials:
+  github: "https://github.com/Maxoulfou"
+  linkedin: "https://www.linkedin.com/in/maxence-brochier-7a2219157/"
+  twitter: "https://twitter.com/MaxenceBrochier"

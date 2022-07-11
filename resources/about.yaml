@@ -1,0 +1,27 @@
+about: >
+  I have a degree in computer science and am currently learning backend languages and frameworks. I am an open source enthusiast
+  and I have a strong interest in quantum and API development. My main development languages are
+  are Python, PHP, Go.
+  I'm still learning Javascript, Java, C, C++, Bash.
+education:
+  university:
+    name: "Polytechnique Haut-de-France - Vallenciennes (59) FR"
+    degree: "Technical degree in computer sciences and development"
+    batch: 2021
+  high school:
+    name: "Lycée LPO Louis Lachenal - Annecy (74) FR"
+    degree: "High school diploma in science technology, innovation and sustainable development"
+    batch: 2019
+    mark: 12.5
+experience:
+  SysAdmin:
+    organization: "NextVision"
+    duration: "July 2021 - Today"
+    details: "I manage local network, customers network. I was the technician's support. Make intern PWA to manage interventions and logs."
+  IT Technician:
+    organization: "2LINFO"
+    duration: "September 2020 - July 2021"
+    details: "I has developed Presensio's API, the backend. Made some customers support."
+certifications:
+  cisco: ["CISCO CCNA 1 (and) 2"]
+  lpi: ["LPI Essentials"]
